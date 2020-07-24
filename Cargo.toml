@@ -1,5 +1,5 @@
 [package]
-name = "mandelbolt"
+name = "mandelbrot"
 version = "0.1.0"
 authors = ["Lucas Polo <pradopolo@gmail.com>"]
 edition = "2018"
@@ -8,3 +8,4 @@ edition = "2018"
 
 [dependencies]
 num = "0.1.27"
+image = "0.13.0"
