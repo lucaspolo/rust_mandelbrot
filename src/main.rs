@@ -3,6 +3,8 @@ use num::Complex;
 
 use std::io::Write;
 
+extern crate num_cpus;
+
 extern crate crossbeam;
 
 fn main() {
@@ -31,7 +33,10 @@ fn main() {
 
     // render(&mut pixels, bounds, upper_left, lower_right);
 
-    let threads = 8;
+    let threads = num_cpus::get();
+
+    println!("Running in {} threads...", threads);
+
     let rows_per_band = bounds.1 / threads + 1;
 
     {
